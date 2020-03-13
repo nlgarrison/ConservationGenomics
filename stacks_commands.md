@@ -6,7 +6,7 @@ process_radtags -P -p $raw_read_directory -o $processed_sample_directory -b $bar
 
 denovo_map - dry run
 ===
-denovo_map.pl --samples $processed_sample_directory --popmap Mhemb93.pop -o $sample_directory --paired -T 32 -M 3 -n 2 -d
+denovo_map.pl --samples $processed_sample_directory --popmap Mhemb90.pop -o $sample_directory --paired -T 32 -M 3 -n 2 -d
 
 ustacks - example command
 ==========
@@ -14,16 +14,16 @@ ustacks -t gzfastq -f $processed_sample_directory/$sample_name -o $sample_direct
 
 cstacks - *using wild population map*
 ==========
-/usr/local/genome/stacks2.1/bin/cstacks -P $sample_directory -M Mhemb93.pop -p 32 -n 2
+/usr/local/genome/stacks2.1/bin/cstacks -P $sample_directory -M Mhemb90.pop -p 32 -n 2
 
 sstacks
 ==========
-sstacks -P $sample_directory -M Mhemb93.pop -p 32
+sstacks -P $sample_directory -M Mhemb90.pop -p 32
 
 tsv2bam
 ==========
-tsv2bam -P $sample_directory -M Mhemb93.pop -t 32 -R $processed_sample_directory
+tsv2bam -P $sample_directory -M Mhemb90.pop -t 32 -R $processed_sample_directory
 
 gstacks
 ==========
-gstacks -P $sample_directory -M Mhemb93.pop -t 32
+gstacks -P $sample_directory -M Mhemb90.pop -t 32
